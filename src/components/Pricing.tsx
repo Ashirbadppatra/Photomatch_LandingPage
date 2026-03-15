@@ -87,7 +87,10 @@ export default function Pricing() {
             <div
               key={index}
               className={`pricing-card ${plan.popular ? 'popular' : ''}`}
-              style={{ '--plan-color': plan.color } as React.CSSProperties}
+              style={{
+                '--plan-color': plan.color,
+                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
+              } as React.CSSProperties}
             >
               {plan.popular && (
                 <div className="popular-badge">
@@ -130,21 +133,21 @@ export default function Pricing() {
         </div>
 
         <div className="archive-info">
-          <div className="info-card">
+          <div className="info-card" style={{ animation: 'fadeInUp 0.6s ease-out 0.3s both' }}>
             <div className="info-icon">💰</div>
             <div className="info-content">
               <h4>Archive Pricing</h4>
               <p>Extend event life with our simple coin system: <strong>1.5 coins/GB/month</strong>. Archive only when needed!</p>
             </div>
           </div>
-          <div className="info-card">
+          <div className="info-card" style={{ animation: 'fadeInUp 0.6s ease-out 0.4s both' }}>
             <div className="info-icon">🎁</div>
             <div className="info-content">
               <h4>Bonus Days</h4>
               <p>Archive early and unused validity days convert to <strong>free bonus archive time</strong> automatically!</p>
             </div>
           </div>
-          <div className="info-card">
+          <div className="info-card" style={{ animation: 'fadeInUp 0.6s ease-out 0.5s both' }}>
             <div className="info-icon">💸</div>
             <div className="info-content">
               <h4>Pro-Rata Refunds</h4>

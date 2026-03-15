@@ -88,17 +88,17 @@ export default function Hero() {
           </div>
 
           <h1 className="hero-title">
-            <span className="title-line">Every Guest.</span>
-            <span className="title-line">Every Photo.</span>
-            <span className="title-gradient">Found Instantly.</span>
+            <span className="title-line" style={{ animation: 'slideInRight 0.8s ease-out 0.1s both' }}>Every Guest.</span>
+            <span className="title-line" style={{ animation: 'slideInRight 0.8s ease-out 0.2s both' }}>Every Photo.</span>
+            <span className="title-gradient" style={{ animation: 'slideInLeft 0.8s ease-out 0.3s both' }}>Found Instantly.</span>
           </h1>
 
-          <p className="hero-description">
+          <p className="hero-description" style={{ animation: 'fadeInUp 0.8s ease-out 0.4s both' }}>
             Revolutionary AI face recognition that delivers personalized photo galleries
             to your event guests in seconds. No apps, no searching, just pure magic.
           </p>
 
-          <div className="hero-buttons">
+          <div className="hero-buttons" style={{ animation: 'fadeInUp 0.8s ease-out 0.5s both' }}>
             <a href="/client" className="btn-primary btn-large">
               <span>Start Free Trial</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -110,7 +110,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="hero-stats">
+          <div className="hero-stats" style={{ animation: 'fadeInUp 0.8s ease-out 0.6s both' }}>
             <div className="stat-card">
               <div className="stat-icon">⚡</div>
               <div className="stat-content">

@@ -6,28 +6,32 @@ const steps = [
     title: 'Upload Photos',
     description: 'Drag and drop your event photos using our lightning-fast desktop uploader or web interface. Handle thousands of images effortlessly.',
     icon: '📤',
-    color: '#6366f1'
+    color: '#6366f1',
+    illustration: 'https://cdn.storyset.com/illustrations/uploading-xl.webp'
   },
   {
     number: '02',
     title: 'AI Detects Faces',
     description: 'Our powerful AI instantly analyzes every photo and detects all faces. Completely automated, zero manual tagging required.',
     icon: '🤖',
-    color: '#8b5cf6'
+    color: '#8b5cf6',
+    illustration: 'https://cdn.storyset.com/illustrations/ai-xl.webp'
   },
   {
     number: '03',
     title: 'Share Event Link',
     description: 'Generate a QR code or private link for your event. Guests access it instantly without downloading any app.',
     icon: '🔗',
-    color: '#ec4899'
+    color: '#ec4899',
+    illustration: 'https://cdn.storyset.com/illustrations/sharing-xl.webp'
   },
   {
     number: '04',
     title: 'Guests Find Photos',
     description: 'Guests take a quick selfie and instantly receive all photos they appear in. Magic delivered in under 1 second.',
     icon: '✨',
-    color: '#10b981'
+    color: '#10b981',
+    illustration: 'https://cdn.storyset.com/illustrations/selfie-xl.webp'
   }
 ];
 
@@ -77,6 +81,8 @@ export default function HowItWorks() {
           </div>
 
           <div className="steps-visual">
+            <div className="visual-decoration visual-decoration-1"></div>
+            <div className="visual-decoration visual-decoration-2"></div>
             <div className="visual-card">
               {steps.map((step, index) => (
                 <div
@@ -84,13 +90,7 @@ export default function HowItWorks() {
                   className={`visual-content ${activeStep === index ? 'active' : ''}`}
                   style={{ background: `linear-gradient(135deg, ${step.color}15, ${step.color}05)` }}
                 >
-                  <div className="visual-icon" style={{ background: step.color }}>
-                    {step.icon}
-                  </div>
-                  <h4>{step.title}</h4>
-                  <div className="visual-progress">
-                    <div className="progress-bar" style={{ background: step.color }}></div>
-                  </div>
+                  <img src={step.illustration} alt={step.title} loading="lazy" />
                 </div>
               ))}
             </div>
